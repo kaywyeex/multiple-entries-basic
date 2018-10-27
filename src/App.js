@@ -1,8 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  async componentDidMount() {
+    const res = await fetch('/api')
+      .then(x => x.text())
+      .catch(e => e);
+
+    console.log(res);
+  }
+
   render() {
     return (
       <div className="App">
@@ -15,9 +23,8 @@ class App extends Component {
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
+            rel="noopener noreferrer">
+            INDEX.HTML
           </a>
         </header>
       </div>

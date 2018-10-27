@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import ReactDOM from 'react-dom';
 
-export default class extends React.Component {
+class App extends Component {
   render() {
-    return <h1>About</h1>;
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABOUT/INDEX.HTML
+          </a>
+        </header>
+      </div>
+    );
   }
 }
+
+ReactDOM.render(<App />, document.getElementById('root'));
